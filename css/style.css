@@ -1,0 +1,610 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.logo {
+  font-family: 'Quicksand', sans-serif; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+.line {
+  position: relative;
+  width: 50px; }
+  .line::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    left: 0;
+    border-bottom: 3px solid #008ed6; }
+  .line::after {
+    position: absolute;
+    content: "";
+    width: 23px;
+    right: 0;
+    border-bottom: 3px solid #008ed6; }
+
+.heading {
+  max-width: 500px;
+  margin: auto;
+  text-align: center; }
+  .heading h2 {
+    color: #008ed6;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800; }
+  .heading h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 20px 0;
+    line-height: 1; }
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #b8b8b8;
+  line-height: 1.5; }
+
+header {
+  background-image: url("../images/lucid-background-top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  header .navbar {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  header .navbar-toggler {
+    color: transparent !important;
+    border-color: transparent !important; }
+  header nav .navbar-brand {
+    width: 25%;
+    display: flex;
+    align-items: center; }
+    header nav .navbar-brand .logo h2 {
+      font-size: 24pt;
+      font-weight: 500;
+      text-transform: uppercase; }
+    header nav .navbar-brand .span h3 {
+      font-size: 9px;
+      margin-left: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #404046; }
+  header nav ul.navbar-nav li.nav-item {
+    padding: 0 15px; }
+    header nav ul.navbar-nav li.nav-item:nth-child(6) {
+      padding-right: 0; }
+    header nav ul.navbar-nav li.nav-item .line {
+      transform: scale(0); }
+    header nav ul.navbar-nav li.nav-item a.nav-link {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: capitalize;
+      padding: 15px 0;
+      transition: all .6s linear; }
+      header nav ul.navbar-nav li.nav-item a.nav-link:hover {
+        color: #fff; }
+  header nav ul.navbar-nav li.nav-item:hover .line {
+    transform: scale(1);
+    transition: all .3s linear; }
+
+.banner-section {
+  padding-top: 40px;
+  color: #fff; }
+  .banner-section .banner-heading {
+    padding-top: 40px; }
+    .banner-section .banner-heading h2 {
+      color: #008ed6;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 25px; }
+    .banner-section .banner-heading h1 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: lighter;
+      margin-bottom: 25px; }
+    .banner-section .banner-heading p {
+      font-size: 18px;
+      color: #b4b4b4;
+      line-height: 1.5; }
+    .banner-section .banner-heading .button {
+      margin-top: 90px;
+      color: #fff; }
+      .banner-section .banner-heading .button .frist-btn {
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 3px;
+        border: 1px solid #b4b4b4;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all .6s linear; }
+        .banner-section .banner-heading .button .frist-btn:hover {
+          background: #008ed6;
+          border: 1px solid transparent; }
+        .banner-section .banner-heading .button .frist-btn:focus {
+          box-shadow: none; }
+      .banner-section .banner-heading .button .secound-btn {
+        margin-left: 20px; }
+
+.features-section {
+  padding: 80px 0; }
+  .features-section .line {
+    margin: auto; }
+  .features-section .icon-box {
+    text-align: center;
+    margin-top: 60px; }
+    .features-section .icon-box .icon {
+      margin-bottom: 20px; }
+      .features-section .icon-box .icon i {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        border-radius: 50%;
+        color: #008ed6;
+        border: 1px solid #e1e1e1;
+        font-size: 30px;
+        transition: all .6s linear; }
+        .features-section .icon-box .icon i:hover {
+          background: #008ed6;
+          color: #fff;
+          -webkit-box-shadow: 1px -1px 13px -3px #008ed6;
+          -moz-box-shadow: 1px -1px 13px -3px #008ed6;
+          box-shadow: 1px -1px 13px -3px #008ed6;
+          transform: scale(1.3); }
+    .features-section .icon-box h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 15px; }
+
+.device-section {
+  padding: 80px 0; }
+  .device-section .device {
+    max-width: 470px;
+    margin: auto; }
+    .device-section .device .heading {
+      text-align: left;
+      margin: 0;
+      margin-top: 40px; }
+    .device-section .device .discription {
+      margin: 30px 0;
+      margin-top: 60px; }
+    .device-section .device ul li {
+      font-size: 18px;
+      font-weight: 500; }
+      .device-section .device ul li i {
+        color: #008ed6;
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px; }
+
+.customize-section {
+  padding: 80px 0;
+  background: #f2f2f2; }
+  .customize-section .heading {
+    text-align: left;
+    margin: 0;
+    margin-top: 40px; }
+  .customize-section .discription {
+    margin: 60px 0; }
+
+.testimonial-section {
+  padding: 80px 0;
+  background-image: url("../images/Priceing-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .testimonial-section .line {
+    margin: auto; }
+  .testimonial-section .heading h1 {
+    color: #fff; }
+  .testimonial-section .testimonial {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 60px; }
+    .testimonial-section .testimonial p {
+      font-size: 22px;
+      color: #fff;
+      font-weight: 500;
+      font-style: italic; }
+  .testimonial-section .client {
+    margin-top: 20px;
+    display: flex;
+    align-items: center; }
+    .testimonial-section .client .client-tittle {
+      margin-left: 10px; }
+      .testimonial-section .client .client-tittle h4 {
+        font-size: 16px;
+        color: #dbdbdc; }
+      .testimonial-section .client .client-tittle h3 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin: 8px 0; }
+
+.like-section {
+  padding: 30px;
+  background: #000; }
+  .like-section h1 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300; }
+  .like-section .button {
+    color: #fff;
+    display: flex;
+    justify-content: space-around; }
+    .like-section .button .frist-btn {
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: 1px solid #b4b4b4;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all .6s linear; }
+      .like-section .button .frist-btn:hover {
+        background: #008ed6;
+        border: 1px solid transparent; }
+      .like-section .button .frist-btn:focus {
+        box-shadow: none; }
+
+.pricing-plan-section {
+  padding: 80px 0; }
+  .pricing-plan-section .line {
+    margin: auto; }
+  .pricing-plan-section .card {
+    margin-top: 60px;
+    text-align: center; }
+    .pricing-plan-section .card:hover h2 {
+      color: #008ed6;
+      transition: all .6s linear; }
+    .pricing-plan-section .card:hover .plan {
+      background: #008ed6;
+      transition: all .6s linear;
+      color: #fff; }
+    .pricing-plan-section .card:hover .frist-btn {
+      color: #fff !important;
+      background: #008ed6;
+      border: 1px solid transparent; }
+    .pricing-plan-section .card:hover .plan p {
+      color: #fff !important; }
+    .pricing-plan-section .card h2 {
+      text-transform: uppercase;
+      padding: 20px 0;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 24px;
+      font-weight: 700; }
+    .pricing-plan-section .card .plan {
+      padding: 30px 0;
+      border-bottom: 1px solid #e0e0e0; }
+      .pricing-plan-section .card .plan h1 {
+        font-size: 48px;
+        font-weight: 700; }
+        .pricing-plan-section .card .plan h1 span {
+          font-size: 30px;
+          vertical-align: top; }
+    .pricing-plan-section .card .text {
+      padding: 30px 20px;
+      padding-bottom: 20px; }
+      .pricing-plan-section .card .text p {
+        font-size: 19px; }
+        .pricing-plan-section .card .text p a {
+          color: #008ed6; }
+    .pricing-plan-section .card .button {
+      margin: 20px;
+      margin-top: 30px; }
+      .pricing-plan-section .card .button .frist-btn {
+        color: #008ed6;
+        padding: 10px 20px;
+        border-radius: 3px;
+        border: 1px solid #b4b4b4;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all .6s linear; }
+        .pricing-plan-section .card .button .frist-btn:focus {
+          box-shadow: none; }
+
+.contact-section {
+  padding: 80px 0;
+  background: #ededed; }
+  .contact-section .line {
+    margin: auto; }
+  .contact-section .contact-box {
+    margin-top: 60px;
+    text-align: center; }
+    .contact-section .contact-box .contact-icon i {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #008ed6;
+      font-size: 30px;
+      margin-bottom: 30px; }
+  .contact-section .contact-form {
+    max-width: 850px;
+    margin: auto;
+    background: #1a1a1a;
+    margin-top: 80px; }
+    .contact-section .contact-form form {
+      padding: 40px; }
+      .contact-section .contact-form form .form-group {
+        margin: 25px 0; }
+        .contact-section .contact-form form .form-group:nth-child(1) {
+          margin-top: 0; }
+        .contact-section .contact-form form .form-group:nth-child(3) {
+          margin-bottom: 0; }
+      .contact-section .contact-form form .form-control {
+        background: transparent;
+        border-radius: 1px solid #444348;
+        border-radius: 3px;
+        padding: 16px; }
+        .contact-section .contact-form form .form-control:focus {
+          box-shadow: none; }
+      .contact-section .contact-form form .button {
+        text-align: right;
+        margin-top: 30px; }
+        .contact-section .contact-form form .button .frist-btn {
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 3px;
+          border: 1px solid #b4b4b4;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 600;
+          transition: all .6s linear; }
+          .contact-section .contact-form form .button .frist-btn:hover {
+            background: #008ed6;
+            border: 1px solid transparent; }
+          .contact-section .contact-form form .button .frist-btn:focus {
+            box-shadow: none; }
+
+footer {
+  padding: 20px 0;
+  background: #000; }
+  footer .social-icon ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer .social-icon ul li i {
+      color: #b4b4b4;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      transition: all .6s linear; }
+      footer .social-icon ul li i:hover {
+        transform: scale(1.8); }
+  footer p {
+    color: #b4b4b4; }
+
+@media (max-width: 1399.98px) {
+  .banner-heading p br {
+    display: none; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    padding: 10px 20px; } }
+@media (max-width: 1199.98px) {
+  .banner-section .banner-heading h1 {
+    font-size: 38px; }
+
+  .banner-section .banner-heading .button {
+    margin-top: 50px; }
+
+  .like-section .col-lg-4 {
+    padding-right: 0; }
+
+  .like-section h1 {
+    font-size: 32px; }
+
+  .pricing-plan-section .card {
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 60px; } }
+@media (max-width: 991.98px) {
+  header .navbar {
+    padding-top: 20px;
+    padding-bottom: 10px; }
+
+  .banner-section .banner-heading {
+    padding-top: 0; }
+
+  .banner-section .banner-heading .button {
+    margin-top: 20px; }
+
+  .banner-section .banner-heading h1 {
+    font-size: 30px; }
+
+  .banner-section .banner-heading p {
+    font-size: 16px; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    padding: 10px 20px; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    font-size: 12px; }
+
+  .navbar {
+    height: inherit; }
+
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    text-align: center;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s; }
+
+  .device-section .device .heading {
+    margin-top: 0; }
+
+  .device-section .iphone {
+    margin: auto; }
+
+  .customize-section .iphone-5 {
+    margin-top: 60px; }
+
+  .like-section .button {
+    justify-content: space-between;
+    max-width: 320px;
+    margin-top: 20px; }
+
+  .like-section .button {
+    margin-top: 20px;
+    margin: 20px auto 0; }
+
+  .testimonial p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    font-style: italic; } }
+@media (max-width: 767.98px) {
+  .banner-section .banner-heading h1 {
+    font-size: 40px; }
+
+  .banner-section .banner-heading p {
+    font-size: 18px; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    padding: 10px 20px; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    font-size: 14px; }
+
+  .lucid-phone {
+    display: none; }
+
+  .banner-section .banner-heading .button {
+    margin-top: 30px; }
+
+  .banner-section .banner-heading {
+    padding: 50px 0;
+    padding-top: 0;
+    /* text-align: center; */ }
+
+  .icon-box {
+    max-width: 322px;
+    margin: auto; }
+
+  .device-section .device {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 60px; }
+
+  .device-section .iphone {
+    max-width: 350px;
+    margin: auto; }
+
+  .contact-form textarea {
+    margin-top: 25px; } }
+@media (max-width: 575.98px) {
+  .banner-section .banner-heading {
+    padding: 50px 0;
+    padding-top: 0;
+    /* text-align: center; */ }
+
+  .banner-section .banner-heading h1 {
+    font-size: 42px; }
+
+  .customize-section .iphone-5 {
+    margin-top: 0; } }
+@media (max-width: 480px) {
+  .banner-section .banner-heading {
+    padding-top: 0;
+    text-align: center; }
+
+  .banner-section .banner-heading h1 {
+    font-size: 35px; }
+
+  .banner-section .banner-heading p {
+    font-size: 15px;
+    margin-bottom: 20px; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    padding: 10px 20px; }
+
+  .banner-section .banner-heading .button .frist-btn {
+    font-size: 12px; }
+
+  .banner-section .banner-heading .button {
+    /* margin-top: 30px; */
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    /* margin: auto; */
+    margin: auto; }
+
+  .banner-section .banner-heading .button .secound-btn {
+    margin-left: 0;
+    margin-top: 20px; }
+
+  .heading h1 {
+    font-size: 30px; }
+
+  .like-section h1 {
+    font-size: 28px; }
+
+  .like-section .button {
+    flex-direction: column;
+    max-width: 180px; }
+
+  .like-section .button .secound-btn {
+    margin-top: 20px; } }
+@media (max-width: 380px) {
+  .banner-section .banner-heading h1 {
+    font-size: 30px; } }
+
+/*# sourceMappingURL=style.css.map */
