@@ -117,7 +117,8 @@ header {
     header nav ul.navbar-nav li.nav-item:nth-child(6) {
       padding-right: 0; }
     header nav ul.navbar-nav li.nav-item .line {
-      transform: scale(0); }
+      transform: scale(0);
+      margin: auto; }
     header nav ul.navbar-nav li.nav-item a.nav-link {
       color: #fff;
       font-size: 16px;
@@ -549,7 +550,10 @@ footer {
     margin: auto; }
 
   .contact-form textarea {
-    margin-top: 25px; } }
+    margin-top: 25px; }
+
+  .contact-section .contact-form form .form-control {
+    padding: 10px; } }
 @media (max-width: 575.98px) {
   .banner-section .banner-heading {
     padding: 50px 0;
